@@ -1,0 +1,229 @@
+:root {
+  --AzulEscuro: #080E26;
+  --AzulIndigo: #1F2350;
+  --Lavanda: #DAE7FE;
+  --VerdeClaro: #E5FEDE;
+  --AmareloClaro: #FEF6DB;
+  --preto: #050505; 
+  --branco: #fff;
+
+  --borda: 2px solid black;
+  --sombra: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  --fonte1: 'Mystery Quest', system-ui;
+  --fonte2: 'Griffy', cursive;
+  --fonte3: 'Spirax', cursive;
+  --fonte4: 'Almendra Display', serif;
+  --fonteCorpo: 'Poppins', sans-serif;
+}
+
+html, body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-image: url('../imagens/Fundo.png');
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------- Cabeçalho --------*/
+
+header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 10px;
+  margin: 0px;
+  border: 0px;
+  background-color: var(--AzulEscuro);
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative; /*Se eu for manter a costura*/
+}
+
+/*Se eu for manter a costura*/
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;  
+  left: 15px;  
+  right: 15px;  
+  border-bottom: 2px dashed var(--preto); 
+}
+
+h1 {
+  color: var(--branco);
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  font-size: 40px;
+  font-family: var(--fonte2);
+  font-weight: normal;
+}
+
+/*-------- Main --------*/
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+.container {
+  background-color: var(--AzulIndigo);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0px;
+  border: var(--borda);
+  outline: 2px dashed var(--AzulEscuro);
+  outline-offset: -7px;
+}
+
+.container p {
+  color: var(--branco);
+  font-size: 30px;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+/*-------- Botões --------*/
+.btpause {
+  grid-column: 4;
+  background-color: var(--Lavanda);
+  color: #050505;
+  border: 3px solid var(--preto);
+  border-radius: 15px;
+  padding: 5px 5px;
+  font-family: var(--fonte1);
+  font-size: 25px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 6px 0 var(--preto);
+}
+
+.btpause:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 0 var(--pretoBorda);
+}
+
+/*-------- Área de Jogo --------*/
+.areaDeJogo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/*-------- Tabluleiro --------*/
+
+.tabuleiro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: o;
+  position: relative;
+}
+
+.tabuleiro .imgTabuleiro {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+.tabuleiro .peca {
+  display: none;
+}
+
+.statusJogo {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  font-family: var(--fonte3);
+}
+
+/*-------- Jogadores --------*/
+.jogador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.jogadorAvatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: var(--borda);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jogador1 .jogadorAvatar {
+  background-color: var(--AmareloClaro);
+}
+
+.jogador2 .jogadorAvatar {
+  background-color: var(--VerdeClaro);
+}
+
+.jogador img {
+  width: 85%;
+  height: auto;
+}
+
+.jogador .nomeJogador {
+  color: var(--branco);
+  font-size: 25px;
+  /*font-weight: bold;*/
+  margin: 2px 0;
+  font-family: var(--fonte2);
+}
+
+.jogador p {
+  color: var(--Lavanda);
+  font-size: 20px;
+  margin: 0;
+  font-family: var(--fonte1);
+}
+
+/*-------- footer --------*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--AzulEscuro);
+  padding: 10px;
+  position: relative; /*Se eu for manter a costura*/
+}
+
+/*Se eu for manter a costura*/
+footer::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  right: 15px;
+  border-top: 2px dashed var(--preto);
+}
