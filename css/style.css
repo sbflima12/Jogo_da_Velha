@@ -35,7 +35,6 @@ body {
 }
 
 /*-------- Cabeçalho --------*/
-
 header {
   display: flex;
   justify-content: center;
@@ -81,8 +80,6 @@ main {
   width: 100%;
 }
 
-
-
 .container {
   background-color: var(--AzulIndigo);
   border-radius: 8px;
@@ -101,26 +98,7 @@ main {
   padding: 0px;
 }
 
-/*-------- Botões --------*/
-.btpause {
-  grid-column: 4;
-  background-color: var(--Lavanda);
-  color: #050505;
-  border: 3px solid var(--preto);
-  border-radius: 15px;
-  padding: 5px 5px;
-  font-family: var(--fonte1);
-  font-size: 25px;
-  font-weight: normal;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 6px 0 var(--preto);
-}
 
-.btpause:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 0 var(--pretoBorda);
-}
 
 /*-------- Área de Jogo --------*/
 .areaDeJogo {
@@ -135,7 +113,6 @@ main {
 }
 
 /*-------- Tabluleiro --------*/
-
 .tabuleiro {
   display: flex;
   justify-content: center;
@@ -209,7 +186,6 @@ main {
 }
 
 /*-------- footer --------*/
-
 footer {
   display: flex;
   justify-content: center;
@@ -226,4 +202,90 @@ footer::before {
   left: 15px;
   right: 15px;
   border-top: 2px dashed var(--preto);
+}
+
+/*-------- Menu de pause --------*/
+.menuPause {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+  
+}
+
+.containerPause {
+  background-color: var(--AzulIndigo);
+  border: var(--borda);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  outline: 2px dashed var(--branco);
+  outline-offset: -8px;
+}
+
+.containerPause h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: var(--fonte1);
+  color: var(--Lavanda);
+  font-weight: normal;
+  font-size: 40px;
+}
+
+/*-------- Botões --------*/
+.btpause {
+  grid-column: 4;
+  background-color: var(--Lavanda);
+  color: #050505;
+  border: 3px solid var(--preto);
+  border-radius: 15px;
+  padding: 5px 5px;
+  font-family: var(--fonte1);
+  font-size: 25px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 6px 0 var(--preto);
+}
+
+.btpause:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 0 var(--preto);
+}
+
+.botoesPause {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.bts {
+  background-color: var(--AzulEscuro);
+  color: var(--AmareloClaro);
+  border: var(--borda);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-family: var(--fonte4);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 0 var(--preto);
+}
+
+.bts:hover {
+  background-color: var(--Lavanda);
+  color: var(--preto);
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--preto);
 }
