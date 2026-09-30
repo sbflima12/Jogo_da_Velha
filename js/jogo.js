@@ -1,15 +1,9 @@
 /*-------- Variáveis Globais --------*/
-/* Botões */
+/* Variáveis */
 const btPause = document.getElementById('btPause');
 const menuPause = document.getElementById('menuPause');
 const btContinuar = document.getElementById('btContinuar');
 const btReiniciar = document.getElementById('btReiniciar');
-/* Peças */
-const celulas = document.querySelectorAll('.celula');
-let tabuleiro = ['', '', '', '', '', '', '', '', ''];
-let jogadorAtual = 'jogador1';
-const imgBotao = 'imagens/Botao.png';
-const imgTriangulo = 'imagens/Triangulo.png';
 
 /*-------- Botão de Pause --------*/
 btPause.addEventListener('click', function() {
@@ -31,9 +25,17 @@ function reiniciarJogo() {
     });
 
     menuPause.style.display = 'none';
+    atualizarTurno();
 }
 
 /*-------- Peças do Tabuleiro --------*/
+/* Variáveis */
+const celulas = document.querySelectorAll('.celula');
+let tabuleiro = ['', '', '', '', '', '', '', '', ''];
+let jogadorAtual = 'jogador1';
+const imgBotao = 'imagens/Botao.png';
+const imgTriangulo = 'imagens/Triangulo.png';
+
 celulas.forEach(celula => {
     celula.addEventListener('click', clicado);
 });
@@ -60,4 +62,27 @@ function clicado(evento) {
         jogadorAtual = 'jogador1';
     }
     celulaClicada.appendChild(novaImagem);
+    atualizarTurno();
 }
+
+/*------- Nome dos Jogadores --------*/
+const mostrarJogador1 = document.querySelector('.jogador1 .nomeJogador');
+const mostrarJogador2 = document.querySelector('.jogador2 .nomeJogador');
+const nomeSalvo1 = localStorage.getItem('jogador1') || ('Jogador 1');
+const nomeSalvo2 = localStorage.getItem('jogador2') || ('Jogador 2');
+
+if(mostrarJogador1) mostrarJogador1.textContent = nomeSalvo1;
+if(mostrarJogador2) mostrarJogador2.textContent = nomeSalvo2;
+
+const mostrarVez = document.getElementById('nomeVez');
+
+function atualizarTurno() {
+    if (jogadorAtual === 'jogador1') {
+        mostrarVez.textContent = nomeSalvo1;
+    } else {
+        mostrarVez.textContent = nomeSalvo2;
+    }
+}
+
+/*-------- Inicializações --------*/
+atualizarTurno();

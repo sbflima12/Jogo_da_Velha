@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/geral.css">
     <link rel="stylesheet" href="css/botao.css">
 
-    <script src="js/script.js" defer></script>
+    <script src="js/jogo.js" defer></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
                     <img src="imagens/Botao.png">
                 </div>
                 <p class="nomeJogador"> Jogador 1 </p>
-                <p> Pontos: <span> 0 </span> </p>
+                <p> Pontos: <span id="pontos1"> 0 </span> </p>
             </div>
 
             <div class="tabuleiro">
@@ -57,13 +57,13 @@
                     <img src="imagens/Triangulo.png">
                 </div>
                 <p class="nomeJogador"> Jogador 2 </p>
-                <p> Pontos: <span> 0 </span> </p>
+                <p> Pontos: <span id="pontos2"> 0 </span> </p>
            </div>
         </div>
 
     
         <div class="statusJogo"> 
-            <div class="container"> <p> Vez do <span> Jogador 1 </span> </p> </div>
+            <div class="container"> <p> Vez de <span id="nomeVez"> Jogador 1 </span> </p> </div>
         </div>
     </main>
 
@@ -81,7 +81,6 @@
            </div>
         </div> 
     </div>
-
     
 </body>
 
