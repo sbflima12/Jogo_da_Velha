@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Cherry+Bomb+One&family=Crafty+Girls&family=Griffy&family=Mystery+Quest&family=Playwrite+BR+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rouge+Script&family=Spirax&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jogo.css">
     <link rel="stylesheet" href="css/geral.css">
     <link rel="stylesheet" href="css/botao.css">
 
@@ -63,7 +63,13 @@
 
     
         <div class="statusJogo"> 
-            <div class="container"> <p> Vez de <span id="nomeVez"> Jogador 1 </span> </p> </div>
+            <div class="container"> 
+                <p> Vez de <span id="nomeVez"> Jogador 1 </span> </p> 
+            </div>
+
+            <div class="container">
+                <p> Empates: <span id="pontosEmpate"> 0 </span></p>
+            </div>
         </div>
     </main>
 
@@ -80,6 +86,17 @@
                 <a href="index.html" class="bts" id="btVoltar"> Voltar </a>
            </div>
         </div> 
+    </div>
+
+    <div class="menuPause" id="menuFim"> 
+        <div class="containerPause">
+            <h2> Fim da rodada </h2>
+            <p id="mensagemVencedor"> </p>
+            <div class="botoesPause">
+                <button class="bts" id="btJoNov"> Próxima Rodada </button>
+                <a href="index.html" class="bts"> Sair do Jogo </a>
+            </div>
+        </div>
     </div>
     
 </body>

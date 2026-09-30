@@ -76,6 +76,7 @@
   justify-content: center;
   margin: 40px;
   font-family: var(--fonte3);
+  gap: 5%;
 }
 
 /*-------- Jogadores --------*/
@@ -160,3 +161,11 @@
   font-size: 40px;
 }
 
+/*-------- Menu do Vencedor --------*/
+#mensagemVencedor {
+    color: var(--branco);
+    font-size: 30px;
+    font-family: var(--fonte2);
+    margin-bottom: 20px;
+    text-align: center;
+}

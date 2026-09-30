@@ -1,4 +1,4 @@
-/*-------- Variáveis Globais --------*/
+/*-------- Botões --------*/
 /* Variáveis */
 const btPause = document.getElementById('btPause');
 const menuPause = document.getElementById('menuPause');
@@ -62,6 +62,7 @@ function clicado(evento) {
         jogadorAtual = 'jogador1';
     }
     celulaClicada.appendChild(novaImagem);
+    verificarVencedor();
     atualizarTurno();
 }
 
@@ -82,6 +83,77 @@ function atualizarTurno() {
     } else {
         mostrarVez.textContent = nomeSalvo2;
     }
+}
+
+/*-------- Placar -------*/
+let pontosJog1 = 0;
+let pontosJog2 = 0;
+let empates = 0;
+
+const mostrarPontos1 = document.getElementById('pontos1');
+const mostrarPontos2 = document.getElementById('pontos2');
+const mostrarEmpate = document.getElementById('pontosEmpate');
+const menuFim = document.getElementById('menuFim');
+const mensagemVencedor = document.getElementById('mensagemVencedor');
+const btJoNov = document.getElementById('btJoNov');
+
+//Array com as condições de vitória
+const condicoesVitoria = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
+
+btJoNov.addEventListener('click', function() {
+    menuFim.style.display = 'none';
+    reiniciarJogo();
+});
+
+function verificarVencedor() {
+    let rodadaVencida = false;
+    let vencedor = '';
+
+    for(let i=0; i<condicoesVitoria.length; i++) {
+        const [a, b, c] = condicoesVitoria[i];
+        const celulaA = tabuleiro[a];
+        const celulaB = tabuleiro[b];
+        const celulaC = tabuleiro[c];
+        
+        //Se uma das celulas for vazia
+        if (celulaA == '' || celulaB == '' || celulaC =='') {
+            continue;
+        }
+
+        //Se as três células forem iguais
+        if (celulaA === celulaB && celulaB === celulaC) {
+            rodadaVencida = true;
+            vencedor = celulaA;
+            break;
+        }
+    }
+
+     if(rodadaVencida) {
+        finalizarJogo(vencedor);
+        return;
+    }
+
+    //Se não há mais espaços livres, mas ninguém venceu
+    if (!tabuleiro.includes('')) {
+        finalizarJogo('empate');
+    }
+}
+
+function finalizarJogo(resultado) {
+    if (resultado === 'jogador1') {
+        mensagemVencedor.textContent = `Ponto para ${nomeSalvo1}!`;
+        pontosJog1++;
+        mostrarPontos1.textContent = pontosJog1;
+    } else if (resultado === 'jogador2') {
+        mensagemVencedor.textContent = `Ponto para ${nomeSalvo2}!`;
+        pontosJog2++;
+        mostrarPontos2.textContent = pontosJog2;
+    } else {
+        mensagemVencedor.textContent = 'Deu Velha !';
+        empates++;
+        mostrarEmpate.textContent = empates;
+    }
+    menuFim.style.display = 'flex';
 }
 
 /*-------- Inicializações --------*/
