@@ -119,16 +119,40 @@ main {
   align-items: center;
   margin: o;
   position: relative;
+  max-width: 400px;
 }
 
 .tabuleiro .imgTabuleiro {
-  max-width: 400px;
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.tabuleiro .peca {
-  display: none;
+.grade {
+  position: absolute;
+  top: 0%;
+  left: 1%;
+  width: 99%;
+  height: 99%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3 1fr);
+}
+
+.celula {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  /*border: 1px dashed red; /*Para testar a posição das células*/ 
+}
+
+.celula img {
+  width: 70%;
+  height: auto;
+  pointer-events: none;
 }
 
 .statusJogo {
@@ -148,8 +172,8 @@ main {
 }
 
 .jogadorAvatar {
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   border: var(--borda);
   display: flex;
@@ -166,7 +190,7 @@ main {
 }
 
 .jogador img {
-  width: 85%;
+  width: 80%;
   height: auto;
 }
 
@@ -218,7 +242,6 @@ footer::before {
   align-items: center;
 
   z-index: 1000;
-  
 }
 
 .containerPause {
