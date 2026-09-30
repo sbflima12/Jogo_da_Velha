@@ -1,0 +1,53 @@
+/*-------- Variáveis --------*/
+:root {
+  --AzulEscuro: #080E26;
+  --AzulIndigo: #1F2350;
+  --Lavanda: #DAE7FE;
+  --VerdeClaro: #E5FEDE;
+  --AmareloClaro: #FEF6DB;
+  --preto: #050505; 
+  --branco: #fff;
+
+  --borda: 2px solid black;
+  --sombra: 0px 8px 0px rgba(0, 0, 0, 0.15);
+  --fonte1: 'Mystery Quest', system-ui;
+  --fonte2: 'Griffy', cursive;
+  --fonte3: 'Spirax', cursive;
+  --fonte4: 'Almendra Display', serif;
+  --fonteCorpo: 'Poppins', sans-serif;
+}
+
+.titulo {
+    font-family: var(--fonte1);
+    color: var(--Lavanda);
+    text-align: center;
+}
+
+.titulo h2 {
+    font-weight: normal;
+    font-size: 250%;
+}
+
+.caixaJogador {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 10%;
+
+    /*border: 2px red solid;*/
+}
+
+label {
+    font-family: var(--fonte1);
+    color: var(--branco);
+
+}
+
+input {
+    font-family: var(--fonte4);
+    color: var(--branco);
+    background-color: var(--AzulEscuro);
+    font-size: larger;
+}
+

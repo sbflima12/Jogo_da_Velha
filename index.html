@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Cherry+Bomb+One&family=Crafty+Girls&family=Griffy&family=Mystery+Quest&family=Playwrite+BR+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rouge+Script&family=Spirax&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/botao.css">
 </head>
 
 <body>
@@ -20,64 +22,44 @@
         <div class="container">
             <h1>Jogo da Velha</h1>
         </div>
-        <button class="btpause" id="btPause"> Pause </button>
     </header>
 
-    <main class="conteudoPrincipal"> 
-        <div class="areaDeJogo">
-            <div class="jogador jogador1"> 
-                <div class= "jogadorAvatar">
-                    <img src="imagens/Botao.png">
-                </div>
-                <p class="nomeJogador"> Jogador 1 </p>
-                <p> Pontos: <span> 0 </span> </p>
-            </div>
+    <main>
+    <div class="titulo">
+    <h2> Digite o Nome dos Jogadores </h2>
+    </div>
 
-            <div class="tabuleiro">
-                <img src="imagens/Tabuleiro.png" alt="Tabuleiro de jogo da velha" class="imgTabuleiro">
-                <div class="grade"> 
-                    <div class="celula" data-index="0"> </div>
-                    <div class="celula" data-index="1"> </div>
-                    <div class="celula" data-index="2"> </div>
-                    <div class="celula" data-index="3"> </div>
-                    <div class="celula" data-index="4"> </div>
-                    <div class="celula" data-index="5"> </div>
-                    <div class="celula" data-index="6"> </div>
-                    <div class="celula" data-index="7"> </div>
-                    <div class="celula" data-index="8"> </div>
-                </div>
-            </div>
-
-            <div class="jogador jogador2"> 
-                <div class= "jogadorAvatar">
-                    <img src="imagens/Triangulo.png">
-                </div>
-                <p class="nomeJogador"> Jogador 2 </p>
-                <p> Pontos: <span> 0 </span> </p>
-           </div>
+    <div class="caixaJogador"> 
+    <div class="jogador jogador1"> 
+        <div class= "jogadorAvatar">
+            <img src="imagens/Botao.png">
         </div>
-
+        <p class="nomeJogador"> Jogador 1 </p>
+        <label> Nome: </label>
+        <input type="text" id="nome1" name="nome" required>
+    </div>
     
-        <div class="statusJogo"> 
-            <div class="container"> <p> Vez do <span> Jogador 1 </span> </p> </div>
+    <div class="jogador jogador2"> 
+        <div class= "jogadorAvatar">
+            <img src="imagens/Triangulo.png">
         </div>
+        <p class="nomeJogador"> Jogador 2 </p>
+        <label> Nome: </label>
+        <input type="text" id="nome2" name="nome" required>
+    </div>
+    </div>
+
+    <a href="jogo.html" class="btCorte"> 
+        <span class=textoInvisivel> Começar </span>
+        <span class="metade topo"> Começar </span>
+        <span class="metade baixo"> Começar </span>
+        <span class="linhaCostura"></span>
+        <span class="tesoura">✂️</span>
+    </a>
     </main>
 
-    <footer> 
+    <footer>
         <p></p>
     </footer>
 
-    <div class="menuPause" id="menuPause">
-        <div class="containerPause"> 
-            <h2> Jogo Pausado </h2>
-            <div class="botoesPause">
-                <button class="bts" id="btReiniciar"> Reiniciar </button>
-                <button class="bts" id="btContinuar"> Continuar </button>
-           </div>
-        </div> 
-    </div>
-
-    <script src="js/script.js"></script>
 </body>
-
-</html>

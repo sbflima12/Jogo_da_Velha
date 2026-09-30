@@ -3,6 +3,7 @@
 const btPause = document.getElementById('btPause');
 const menuPause = document.getElementById('menuPause');
 const btContinuar = document.getElementById('btContinuar');
+const btReiniciar = document.getElementById('btReiniciar');
 /* Peças */
 const celulas = document.querySelectorAll('.celula');
 let tabuleiro = ['', '', '', '', '', '', '', '', ''];
@@ -18,6 +19,19 @@ btPause.addEventListener('click', function() {
 btContinuar.addEventListener('click', function() {
     menuPause.style.display = 'none';
 });
+
+btReiniciar.addEventListener('click', reiniciarJogo);
+
+function reiniciarJogo() {
+    tabuleiro = ['', '', '', '', '', '', '', '', ''];
+    jogadorAtual = 'jogador1';
+
+    celulas.forEach(celula => {
+        celula.innerHTML = '';
+    });
+
+    menuPause.style.display = 'none';
+}
 
 /*-------- Peças do Tabuleiro --------*/
 celulas.forEach(celula => {

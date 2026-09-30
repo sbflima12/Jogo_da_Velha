@@ -16,90 +16,6 @@
   --fonteCorpo: 'Poppins', sans-serif;
 }
 
-html, body {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-    background-image: url('../imagens/Fundo.png');
-    background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/*-------- Cabeçalho --------*/
-header {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 10px;
-  margin: 0px;
-  border: 0px;
-  background-color: var(--AzulEscuro);
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  position: relative; /*Se eu for manter a costura*/
-}
-
-/*Se eu for manter a costura*/
-header::after {
-  content: "";
-  position: absolute;
-  bottom: 6px;  
-  left: 15px;  
-  right: 15px;  
-  border-bottom: 2px dashed var(--preto); 
-}
-
-h1 {
-  color: var(--branco);
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  font-size: 40px;
-  font-family: var(--fonte2);
-  font-weight: normal;
-}
-
-/*-------- Main --------*/
-main {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.container {
-  background-color: var(--AzulIndigo);
-  border-radius: 8px;
-  padding: 10px;
-  margin: 0px;
-  border: var(--borda);
-  outline: 2px dashed var(--AzulEscuro);
-  outline-offset: -7px;
-}
-
-.container p {
-  color: var(--branco);
-  font-size: 30px;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-}
-
-
-
 /*-------- Área de Jogo --------*/
 .areaDeJogo {
   display: flex;
@@ -172,8 +88,8 @@ main {
 }
 
 .jogadorAvatar {
-  width: 95px;
-  height: 95px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: var(--borda);
   display: flex;
@@ -207,25 +123,6 @@ main {
   font-size: 20px;
   margin: 0;
   font-family: var(--fonte1);
-}
-
-/*-------- footer --------*/
-footer {
-  display: flex;
-  justify-content: center;
-  background-color: var(--AzulEscuro);
-  padding: 10px;
-  position: relative; /*Se eu for manter a costura*/
-}
-
-/*Se eu for manter a costura*/
-footer::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 15px;
-  right: 15px;
-  border-top: 2px dashed var(--preto);
 }
 
 /*-------- Menu de pause --------*/
@@ -263,52 +160,3 @@ footer::before {
   font-size: 40px;
 }
 
-/*-------- Botões --------*/
-.btpause {
-  grid-column: 4;
-  background-color: var(--Lavanda);
-  color: #050505;
-  border: 3px solid var(--preto);
-  border-radius: 15px;
-  padding: 5px 5px;
-  font-family: var(--fonte1);
-  font-size: 25px;
-  font-weight: normal;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 6px 0 var(--preto);
-}
-
-.btpause:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 0 var(--preto);
-}
-
-.botoesPause {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.bts {
-  background-color: var(--AzulEscuro);
-  color: var(--AmareloClaro);
-  border: var(--borda);
-  border-radius: 10px;
-  padding: 10px 15px;
-  font-family: var(--fonte4);
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 4px 0 var(--preto);
-}
-
-.bts:hover {
-  background-color: var(--Lavanda);
-  color: var(--preto);
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 var(--preto);
-}
