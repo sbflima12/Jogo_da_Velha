@@ -20,7 +20,7 @@
         <div class="container">
             <h1>Jogo da Velha</h1>
         </div>
-        <button class="btpause"> Pause </button>
+        <button class="btpause" id="btPause"> Pause </button>
     </header>
 
     <main class="conteudoPrincipal"> 
@@ -36,15 +36,15 @@
             <div class="tabuleiro">
                 <img src="imagens/Tabuleiro.png" alt="Tabuleiro de jogo da velha" class="imgTabuleiro">
                 <div class="grade"> 
-                    <div class="celula" data-index="0"> <img src="imagens/Botao.png" alt="Botão"> </div>
-                    <div class="celula" data-index="1"> <img src="imagens/Triangulo.png" alt="Triângulo"> </div>
-                    <div class="celula" data-index="2"> <img src="imagens/Botao.png" alt="Botão"> </div>
-                    <div class="celula" data-index="3"> <img src="imagens/Triangulo.png" alt="Triângulo"> </div>
-                    <div class="celula" data-index="4"> <img src="imagens/Botao.png" alt="Botão"> </div>
-                    <div class="celula" data-index="5"> <img src="imagens/Triangulo.png" alt="Triângulo"> </div>
-                    <div class="celula" data-index="6"> <img src="imagens/Botao.png" alt="Botão"> </div>
-                    <div class="celula" data-index="7"> <img src="imagens/Triangulo.png" alt="Triângulo"> </div>
-                    <div class="celula" data-index="8"> <img src="imagens/Botao.png" alt="Botão"> </div>
+                    <div class="celula" data-index="0"> </div>
+                    <div class="celula" data-index="1"> </div>
+                    <div class="celula" data-index="2"> </div>
+                    <div class="celula" data-index="3"> </div>
+                    <div class="celula" data-index="4"> </div>
+                    <div class="celula" data-index="5"> </div>
+                    <div class="celula" data-index="6"> </div>
+                    <div class="celula" data-index="7"> </div>
+                    <div class="celula" data-index="8"> </div>
                 </div>
             </div>
 
@@ -67,17 +67,17 @@
         <p></p>
     </footer>
 
-    <div class="menuPause">
+    <div class="menuPause" id="menuPause">
         <div class="containerPause"> 
             <h2> Jogo Pausado </h2>
             <div class="botoesPause">
-                <button class="bts"> Reiniciar </button>
-                <button class="bts"> Continuar </button>
+                <button class="bts" id="btReiniciar"> Reiniciar </button>
+                <button class="bts" id="btContinuar"> Continuar </button>
            </div>
         </div> 
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
