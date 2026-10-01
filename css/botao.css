@@ -1,3 +1,4 @@
+/*-------- Variáveis --------*/
 :root {
   --AzulEscuro: #080E26;
   --AzulIndigo: #1F2350;
@@ -9,11 +10,11 @@
 
   --borda: 2px solid black;
   --sombra: 0px 8px 0px rgba(0, 0, 0, 0.15);
-  --fonte1: 'Mystery Quest', system-ui;
-  --fonte2: 'Griffy', cursive;
-  --fonte3: 'Spirax', cursive;
-  --fonte4: 'Almendra Display', serif;
-  --fonteCorpo: 'Poppins', sans-serif;
+  --fonteMystery: 'Mystery Quest', system-ui;
+  --fonteGriffy: 'Griffy', cursive;
+  --fonteSpirax: 'Spirax', cursive;
+  --fonteAlmendra: 'Almendra Display', serif;
+  --fontePoppins: 'Poppins', sans-serif;
 }
 
 /*-------- Botão de pause --------*/
@@ -24,7 +25,7 @@
   border: 3px solid var(--preto);
   border-radius: 15px;
   padding: 5px 5px;
-  font-family: var(--fonte1);
+  font-family: var(--fonteMystery);
   font-size: 25px;
   font-weight: normal;
   cursor: pointer;
@@ -52,7 +53,7 @@
   border: var(--borda);
   border-radius: 10px;
   padding: 10px 15px;
-  font-family: var(--fonte4);
+  font-family: var(--fonteAlmendra);
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -82,7 +83,7 @@
 
 .textoInvisivel {
   visibility: hidden;
-  font-family: var(--fonte1);
+  font-family: var(--fonteMystery);
   font-size: 32px;
   padding: 12px 40px;
 }
@@ -99,7 +100,7 @@
   
   background-color: var(--Lavanda);
   color: var(--preto);
-  font-family: var(--fonte1);
+  font-family: var(--fonteMystery);
   font-size: 32px;
   
   border-radius: 25px;

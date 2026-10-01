@@ -10,11 +10,11 @@
 
   --borda: 2px solid black;
   --sombra: 0px 8px 0px rgba(0, 0, 0, 0.15);
-  --fonte1: 'Mystery Quest', system-ui;
-  --fonte2: 'Griffy', cursive;
-  --fonte3: 'Spirax', cursive;
-  --fonte4: 'Almendra Display', serif;
-  --fonteCorpo: 'Poppins', sans-serif;
+  --fonteMystery: 'Mystery Quest', system-ui;
+  --fonteGriffy: 'Griffy', cursive;
+  --fonteSpirax: 'Spirax', cursive;
+  --fonteAlmendra: 'Almendra Display', serif;
+  --fontePoppins: 'Poppins', sans-serif;
 }
 
 /*-------- Elementos Principais --------*/
@@ -77,7 +77,7 @@ h1 {
   border: 0px;
   padding: 0px;
   font-size: 40px;
-  font-family: var(--fonte2);
+  font-family: var(--fonteGriffy);
   font-weight: normal;
 }
 
@@ -107,7 +107,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
 }
 
 .jogadorAvatar {
@@ -136,16 +135,15 @@ h1 {
 .jogador .nomeJogador {
   color: var(--branco);
   font-size: 25px;
-  /*font-weight: bold;*/
   margin: 2px 0;
-  font-family: var(--fonte2);
+  font-family: var(--fonteGriffy);
 }
 
 .jogador p {
   color: var(--Lavanda);
   font-size: 20px;
   margin: 0;
-  font-family: var(--fonte1);
+  font-family: var(--fonteMystery);
 }
 
 /*-------- footer --------*/

@@ -67,6 +67,7 @@ function clicado(evento) {
 }
 
 /*------- Nome dos Jogadores --------*/
+// Variáveis
 const mostrarJogador1 = document.querySelector('.jogador1 .nomeJogador');
 const mostrarJogador2 = document.querySelector('.jogador2 .nomeJogador');
 const nomeSalvo1 = localStorage.getItem('jogador1') || ('Jogador 1');
@@ -105,6 +106,7 @@ btJoNov.addEventListener('click', function() {
     reiniciarJogo();
 });
 
+/*-------- Verifica se alguém venceu, deu empate ou o jogo não terminou -------- */
 function verificarVencedor() {
     let rodadaVencida = false;
     let vencedor = '';
@@ -139,6 +141,7 @@ function verificarVencedor() {
     }
 }
 
+/*--------Atribui pontos para os jogadores  --------*/
 function finalizarJogo(resultado) {
     if (resultado === 'jogador1') {
         mensagemVencedor.textContent = `Ponto para ${nomeSalvo1}!`;

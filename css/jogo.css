@@ -1,3 +1,4 @@
+/*-------- Variáveis --------*/
 :root {
   --AzulEscuro: #080E26;
   --AzulIndigo: #1F2350;
@@ -9,11 +10,11 @@
 
   --borda: 2px solid black;
   --sombra: 0px 8px 0px rgba(0, 0, 0, 0.15);
-  --fonte1: 'Mystery Quest', system-ui;
-  --fonte2: 'Griffy', cursive;
-  --fonte3: 'Spirax', cursive;
-  --fonte4: 'Almendra Display', serif;
-  --fonteCorpo: 'Poppins', sans-serif;
+  --fonteMystery: 'Mystery Quest', system-ui;
+  --fonteGriffy: 'Griffy', cursive;
+  --fonteSpirax: 'Spirax', cursive;
+  --fonteAlmendra: 'Almendra Display', serif;
+  --fontePoppins: 'Poppins', sans-serif;
 }
 
 /*-------- Área de Jogo --------*/
@@ -61,8 +62,6 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  /*border: 1px dashed red; /*Para testar a posição das células*/ 
 }
 
 .celula img {
@@ -71,59 +70,13 @@
   pointer-events: none;
 }
 
+/*-------- Status do Jogo --------*/
 .statusJogo {
   display: flex;
   justify-content: center;
   margin: 40px;
-  font-family: var(--fonte3);
+  font-family: var(--fonteSpirax);
   gap: 5%;
-}
-
-/*-------- Jogadores --------*/
-.jogador {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  
-}
-
-.jogadorAvatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: var(--borda);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.jogador1 .jogadorAvatar {
-  background-color: var(--AmareloClaro);
-}
-
-.jogador2 .jogadorAvatar {
-  background-color: var(--VerdeClaro);
-}
-
-.jogador img {
-  width: 80%;
-  height: auto;
-}
-
-.jogador .nomeJogador {
-  color: var(--branco);
-  font-size: 25px;
-  /*font-weight: bold;*/
-  margin: 2px 0;
-  font-family: var(--fonte2);
-}
-
-.jogador p {
-  color: var(--Lavanda);
-  font-size: 20px;
-  margin: 0;
-  font-family: var(--fonte1);
 }
 
 /*-------- Menu de pause --------*/
@@ -155,7 +108,7 @@
 .containerPause h2 {
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: var(--fonte1);
+  font-family: var(--fonteMystery);
   color: var(--Lavanda);
   font-weight: normal;
   font-size: 40px;
@@ -163,9 +116,9 @@
 
 /*-------- Menu do Vencedor --------*/
 #mensagemVencedor {
-    color: var(--branco);
-    font-size: 30px;
-    font-family: var(--fonte2);
-    margin-bottom: 20px;
-    text-align: center;
+  color: var(--branco);
+  font-size: 30px;
+  font-family: var(--fonteGriffy);
+  margin-bottom: 20px;
+  text-align: center;
 }

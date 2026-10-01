@@ -1,7 +1,9 @@
+/*-------- Variáveis --------*/
 const btComecar = document.querySelector('.btCorte');
 const Nome1 = document.getElementById('nome1');
 const Nome2 = document.getElementById('nome2');
 
+/*-------- Salvar os Nomes dos Jogadores --------*/
 btComecar.addEventListener('click', function(evento) {
     evento.preventDefault();
 
