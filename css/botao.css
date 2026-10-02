@@ -69,6 +69,65 @@
   box-shadow: 0 1px 0 var(--preto);
 }
 
+/*-------- Volume --------*/
+.controleVolume {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.controleVolume label, .containerPause label {
+  color: var(--branco);
+  font-family: var(--fonteGriffy);
+  font-size: 23px;
+  text-align: center;
+  display: block;
+  margin-bottom: 2px;
+}
+
+#volumeSlider, #efeitosSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 8px;
+  background: linear-gradient(to right, var(--Lavanda) 30%, var(--AzulEscuro) 30%);
+  border: 1px solid var(--preto);
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/*Customiza a bolinha do slider no chore, safari e edge*/
+#volumeSlider::-webkit-slider-thumb, #efeitosSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background-image: url('../imagens/Botao.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; /* Garante que a área clicável é redonda */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  accent-color: var(--Lavanda);
+}
+
+/*Customiza a bolinha do slider no firefox*/
+#volumeSlider::-moz-range-thumb, #efeitosSlider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  background-image: url('../imagens/Botao.png');
+  background-size: cover;
+  background-position: center;
+  border: none; /* Remove a borda padrão do Firefox */
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  accent-color: var(--Lavanda);
+}
+
 /*-------- Botão de Começar (Com corte no meio) --------*/
 .btCorte {
     position: relative;

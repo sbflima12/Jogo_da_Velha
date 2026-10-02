@@ -146,6 +146,41 @@ h1 {
   font-family: var(--fonteMystery);
 }
 
+/*-------- Menu de pause --------*/
+.menuPause {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.containerPause {
+  background-color: var(--AzulIndigo);
+  border: var(--borda);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  outline: 2px dashed var(--branco);
+  outline-offset: -8px;
+}
+
+.containerPause h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: var(--fonteMystery);
+  color: var(--Lavanda);
+  font-weight: normal;
+  font-size: 40px;
+}
+
 /*-------- footer --------*/
 footer {
   display: flex;

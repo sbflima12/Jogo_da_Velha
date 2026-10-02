@@ -1,22 +1,3 @@
-/*-------- Variáveis --------*/
-:root {
-  --AzulEscuro: #080E26;
-  --AzulIndigo: #1F2350;
-  --Lavanda: #DAE7FE;
-  --VerdeClaro: #E5FEDE;
-  --AmareloClaro: #FEF6DB;
-  --preto: #050505; 
-  --branco: #fff;
-
-  --borda: 2px solid black;
-  --sombra: 0px 8px 0px rgba(0, 0, 0, 0.15);
-  --fonteMystery: 'Mystery Quest', system-ui;
-  --fonteGriffy: 'Griffy', cursive;
-  --fonteSpirax: 'Spirax', cursive;
-  --fonteAlmendra: 'Almendra Display', serif;
-  --fontePoppins: 'Poppins', sans-serif;
-}
-
 /*-------- Área de Jogo --------*/
 .areaDeJogo {
   display: flex;
@@ -77,41 +58,6 @@
   margin: 40px;
   font-family: var(--fonteSpirax);
   gap: 5%;
-}
-
-/*-------- Menu de pause --------*/
-.menuPause {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-
-  display: none;
-  justify-content: center;
-  align-items: center;
-
-  z-index: 1000;
-}
-
-.containerPause {
-  background-color: var(--AzulIndigo);
-  border: var(--borda);
-  border-radius: 12px;
-  padding: 30px;
-  text-align: center;
-  outline: 2px dashed var(--branco);
-  outline-offset: -8px;
-}
-
-.containerPause h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-family: var(--fonteMystery);
-  color: var(--Lavanda);
-  font-weight: normal;
-  font-size: 40px;
 }
 
 /*-------- Menu do Vencedor --------*/

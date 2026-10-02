@@ -1,22 +1,3 @@
-/*-------- Variáveis --------*/
-:root {
-  --AzulEscuro: #080E26;
-  --AzulIndigo: #1F2350;
-  --Lavanda: #DAE7FE;
-  --VerdeClaro: #E5FEDE;
-  --AmareloClaro: #FEF6DB;
-  --preto: #050505; 
-  --branco: #fff;
-
-  --borda: 2px solid black;
-  --sombra: 0px 8px 0px rgba(0, 0, 0, 0.15);
-  --fonteMystery: 'Mystery Quest', system-ui;
-  --fonteGriffy: 'Griffy', cursive;
-  --fonteSpirax: 'Spirax', cursive;
-  --fonteAlmendra: 'Almendra Display', serif;
-  --fontePoppins: 'Poppins', sans-serif;
-}
-
 /*-------- Textos --------*/
 .titulo {
     font-family: var(--fonteMystery);
@@ -54,3 +35,7 @@ input {
     font-size: larger;
 }
 
+/*-------- audio --------*/
+.menuAudio {
+    display: none;
+}

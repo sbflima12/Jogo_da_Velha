@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/botao.css">
 
     <script src="js/index.js" defer></script>
+    <script src="js/audio.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +25,10 @@
         <div class="container">
             <h1>Jogo da Velha</h1>
         </div>
+        <button class="btpause" id="btAudio"> Áudio </button>
     </header>
+
+    
 
     <main>
     <div class="titulo">
@@ -60,6 +64,25 @@
     </a>
     </main>
 
+    <div class="menuPause" id="menuAudio">
+        <div class="containerPause">
+            <h2> Configurações de Áudio </h2>
+            
+            <div class="controleVolume">
+                <label for="volumeSlider"> Volume da Música </label>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+            </div>
+
+            <div class="controleVolume">
+                <label for="efeitosSlider"> Efeitos Sonoros </label>
+                <input type="range" id="efeitosSlider" min="0" max="1" step="0.01">
+            </div>
+
+            <div class="botoesPause">
+                <button class="bts" id="btFecharAjus"> Fechar </button>
+            </div>
+        </div>
+    </div>
     <footer>
         <p></p>
     </footer>
