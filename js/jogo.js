@@ -24,6 +24,7 @@ function reiniciarJogo() {
         celula.innerHTML = '';
     });
 
+    //Limpa a linha de vitória
     linhaVitoria.style.display = 'none';
     linhaVitoria.style.width = '0';
     linhaVitoria.className = '';
