@@ -42,7 +42,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .celula img {
@@ -68,3 +67,56 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
+/*-------- Efeito Fantasma (Hover nas células vazias) --------*/
+body.vez-jogador1 .celula:empty:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../imagens/Botao.png');
+  background-size: 80%; /* Ajuste essa porcentagem para bater com o tamanho da sua imagem original */
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+
+body.vez-jogador2 .celula:empty:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../imagens/Triangulo.png');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+.celula:empty:hover {
+  cursor: pointer;
+}
+
+/*-------- Linha da Vitória --------*/
+#linhaVitoria {
+  position:absolute;
+  background-color: transparent;
+  border-top: 5px dashed var(--VerdeClaro);
+  height: 0;
+  z-index: 10;
+  display: none;
+  transform-origin: left center;
+  width: 0;
+  transition: width 0.5s ease-out;
+}
+
+/* 8 Posições possíveis de vitória */
+.linha-h0 { top: 16%; left: 5%; transform: rotate(0deg); } /* Linha 1 */
+.linha-h1 { top: 50%; left: 5%; transform: rotate(0deg); } /* Linha 2 */
+.linha-h2 { top: 83%; left: 5%; transform: rotate(0deg); } /* Linha 3 */
+
+.linha-v0 { top: 5%; left: 16%; transform: rotate(90deg); } /* Coluna 1 */
+.linha-v1 { top: 5%; left: 50%; transform: rotate(90deg); } /* Coluna 2 */
+.linha-v2 { top: 5%; left: 83%; transform: rotate(90deg); } /* Coluna 3 */
+
+.linha-d0 { top: 7%; left: 7%; transform: rotate(45deg); }  /* Diagonal \ */
+.linha-d1 { top: 7%; left: 93%; transform: rotate(135deg); } /* Diagonal / */
