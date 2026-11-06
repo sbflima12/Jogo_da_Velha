@@ -61,7 +61,6 @@ header {
   position: relative; /*Se eu for manter a costura*/
 }
 
-/*Se eu for manter a costura*/
 header::after {
   content: "";
   position: absolute;
@@ -187,10 +186,9 @@ footer {
   justify-content: center;
   background-color: var(--AzulEscuro);
   padding: 10px;
-  position: relative; /*Se eu for manter a costura*/
+  position: relative; 
 }
 
-/*Se eu for manter a costura*/
 footer::before {
   content: "";
   position: absolute;

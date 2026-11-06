@@ -75,7 +75,7 @@ body.vez-jogador1 .celula:empty:hover::after {
   width: 100%;
   height: 100%;
   background-image: url('../imagens/Botao.png');
-  background-size: 80%; /* Ajuste essa porcentagem para bater com o tamanho da sua imagem original */
+  background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.4;
@@ -118,5 +118,5 @@ body.vez-jogador2 .celula:empty:hover::after {
 .linha-v1 { top: 5%; left: 50%; transform: rotate(90deg); } /* Coluna 2 */
 .linha-v2 { top: 5%; left: 83%; transform: rotate(90deg); } /* Coluna 3 */
 
-.linha-d0 { top: 7%; left: 7%; transform: rotate(45deg); }  /* Diagonal \ */
-.linha-d1 { top: 7%; left: 93%; transform: rotate(135deg); } /* Diagonal / */
+.linha-d0 { top: 7%; left: 7%; transform: rotate(45deg); }  /* Diagonal [\] */
+.linha-d1 { top: 7%; left: 93%; transform: rotate(135deg); } /* Diagonal [/] */

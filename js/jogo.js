@@ -14,8 +14,19 @@ btContinuar.addEventListener('click', function() {
     menuPause.style.display = 'none';
 });
 
-btReiniciar.addEventListener('click', reiniciarJogo);
+btReiniciar.addEventListener('click', function() {
+    pontosJog1 = 0;
+    pontosJog2 = 0;
+    empates = 0;
 
+    mostrarPontos1.textContent = pontosJog1;
+    mostrarPontos2.textContent = pontosJog2;
+    mostrarEmpate.textContent = empates;
+
+    reiniciarJogo();
+});
+
+// Limpa o tabuleiro
 function reiniciarJogo() {
     tabuleiro = ['', '', '', '', '', '', '', '', ''];
     jogadorAtual = 'jogador1';
@@ -24,7 +35,6 @@ function reiniciarJogo() {
         celula.innerHTML = '';
     });
 
-    //Limpa a linha de vitória
     linhaVitoria.style.display = 'none';
     linhaVitoria.style.width = '0';
     linhaVitoria.className = '';
@@ -60,13 +70,11 @@ function clicado(evento) {
     tabuleiro[indice] = jogadorAtual;
 
     const novaImagem = document.createElement('img');
-    //Pega o volume dos efeitos salvo ou utiliza 0.5
     const volumeAtual = localStorage.getItem('volumeEfeitos') || 0.5;
 
     if (jogadorAtual === 'jogador1') {
         novaImagem.src = imgBotao;
         novaImagem.alt = 'Botão preto';
-        // Aplica o volume e toca o som do botão
         audioBotao.volume = volumeAtual;
         audioBotao.currentTime = 0;
         audioBotao.play();
@@ -75,7 +83,6 @@ function clicado(evento) {
     } else {
         novaImagem.src = imgTriangulo;
         novaImagem.alt = 'Pedra verde triângular';
-        // Aplica o volume e toca o som da pedra
         audioPedra.volume = volumeAtual;
         audioPedra.currentTime = 0;
         audioPedra.play();
@@ -102,12 +109,10 @@ const mostrarVez = document.getElementById('nomeVez');
 function atualizarTurno() {
     if (jogadorAtual === 'jogador1') {
         mostrarVez.textContent = nomeSalvo1;
-        // Adiciona a classe do Jogador 1 e remove a do 2
         document.body.classList.remove('vez-jogador2');
         document.body.classList.add('vez-jogador1');
     } else {
         mostrarVez.textContent = nomeSalvo2;
-        // Adiciona a classe do Jogador 2 e remove a do 1
         document.body.classList.remove('vez-jogador1');
         document.body.classList.add('vez-jogador2');
     }
@@ -147,7 +152,6 @@ function verificarVencedor() {
         const celulaB = tabuleiro[b];
         const celulaC = tabuleiro[c];
         
-        //Se uma das celulas for vazia
         if (celulaA == '' || celulaB == '' || celulaC =='') {
             continue;
         }
@@ -156,7 +160,7 @@ function verificarVencedor() {
         if (celulaA === celulaB && celulaB === celulaC) {
             rodadaVencida = true;
             vencedor = celulaA;
-            indiceVitoria = i; //Memoria a posição da vitória
+            indiceVitoria = i; //Memorisa a posição da vitória
             break;
         }
     }
@@ -190,9 +194,8 @@ function finalizarJogo(resultado, indiceVitoria) {
 
     //Se não for empate, faz a animação da linha
     if (resultado !== 'empate') {
-        //Limpa classes antigas
         linhaVitoria.className = '';
-        //Aplica a classe cert, baseada no array de vitória
+        //Aplica a classe certa, baseada no array de vitória
         const classes = ['linha-h0', 'linha-h1', 'linha-h2', 'linha-v0', 'linha-v1', 'linha-v2', 'linha-d0', 'linha-d1'];
         linhaVitoria.classList.add(classes[indiceVitoria]);
 
@@ -201,7 +204,6 @@ function finalizarJogo(resultado, indiceVitoria) {
         
         //Tempo para animar a linha
         setTimeout(() => {
-            // As diagonais precisam ser mais longas que as linhas retas
             if (indiceVitoria === 6 || indiceVitoria === 7) {
                 linhaVitoria.style.width = '125%'; 
             } else {
@@ -209,7 +211,6 @@ function finalizarJogo(resultado, indiceVitoria) {
             }
         }, 50);
 
-        // Atrasa o aparecimento do menu de vitória
         setTimeout(() => {
             menuFim.style.display = 'flex';
         }, 800);
